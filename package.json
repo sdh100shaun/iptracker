@@ -1,0 +1,36 @@
+{
+  "name": "iptracker",
+  "version": "1.0.0",
+  "description": "Script to report ip",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "create": "npm run build && npm run test",
+    "build": "tsc -p .",
+    "test": "sudo npm i -g && iptracker",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "keywords": [],
+  "author": "shaun.hare@dvsa.gov.uk",
+  "license": "MIT Licence",
+  "devDependencies": {
+    "@types/node": "^13.9.2",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.7.0",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@types/clear": "^0.1.0",
+    "@types/figlet": "^1.2.0",
+    "chalk": "^3.0.0",
+    "clear": "^0.1.0",
+    "commander": "^5.0.0",
+    "figlet": "^1.3.0",
+    "path": "^0.12.7",
+    "typed-rest-client": "^1.7.2"
+  },
+  "bin": {
+    "iptracker": "./dist/index.js"
+  }
+}
