@@ -17,7 +17,7 @@ console.log(
 const user :string = data.email
 program
   .version('0.0.1')
-  .description("An example CLI for sending IP")
+  .description("An example CLI for getting IP")
   .requiredOption('-u, --user <email> ', 'script user', user )
   .parse(process.argv);
 
