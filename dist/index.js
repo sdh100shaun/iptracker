@@ -25,14 +25,13 @@ const clear_1 = __importDefault(require("clear"));
 const figlet_1 = __importDefault(require("figlet"));
 const httpm = __importStar(require("typed-rest-client/HttpClient"));
 const commander_1 = __importDefault(require("commander"));
-const data = __importStar(require("./user.json"));
 clear_1.default();
 // tslint:disable-next-line: no-console
 console.log(chalk_1.default.red(figlet_1.default.textSync('iptracker', { horizontalLayout: 'full' })));
-const user = data.email;
+const user = process.env.LOGNAME != null ? process.env.LOGNAME : "you";
 commander_1.default
     .version('0.0.1')
-    .description("An example CLI for sending IP")
+    .description("An example CLI for getting IP")
     .requiredOption('-u, --user <email> ', 'script user', user)
     .parse(process.argv);
 let iptracker = () => __awaiter(void 0, void 0, void 0, function* () {

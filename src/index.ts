@@ -5,7 +5,6 @@ import clear from 'clear';
 import figlet from 'figlet';
 import * as httpm from 'typed-rest-client/HttpClient';
 import program from 'commander';
-import * as data from './user.json'
 
 clear();
 // tslint:disable-next-line: no-console
@@ -14,7 +13,7 @@ console.log(
     figlet.textSync('iptracker', { horizontalLayout: 'full' })
   )
 );
-const user :string = data.email
+const user :string|undefined  = process.env.LOGNAME != null ? process.env.LOGNAME : "you"
 program
   .version('0.0.1')
   .description("An example CLI for getting IP")
