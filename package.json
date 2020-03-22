@@ -1,6 +1,6 @@
 {
-  "name": "iptracker",
-  "version": "1.0.0",
+  "name": "@sdh100shaun/iptracker",
+  "version": "0.0.1",
   "description": "Script to report ip",
   "main": "dist/index.js",
   "scripts": {
