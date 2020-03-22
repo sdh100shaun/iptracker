@@ -11,7 +11,7 @@
     "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
   },
   "keywords": [],
-  "author": "shaun.hare@dvsa.gov.uk",
+  "author": "shaun@shaunhare.co.uk",
   "license": "MIT Licence",
   "devDependencies": {
     "@types/node": "^13.9.2",
