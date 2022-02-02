@@ -23,7 +23,7 @@
 
   },
   "dependencies": {
-    "@types/clear": "^0.1.0",
+    "@types/clear": "^0.1.2",
     "@types/figlet": "^1.2.0",
     "chalk": "^3.0.0",
     "clear": "^0.1.0",
