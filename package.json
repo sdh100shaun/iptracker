@@ -30,7 +30,7 @@
     "commander": "^5.0.0",
     "figlet": "^1.3.0",
     "path": "^0.12.7",
-    "typed-rest-client": "^1.8.4"
+    "typed-rest-client": "^1.8.6"
   },
   "bin": {
     "iptracker": "./dist/index.js"
