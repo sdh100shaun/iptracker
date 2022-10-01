@@ -20,12 +20,25 @@ program
   .requiredOption('-u, --user <email> ', 'script user', user )
   .parse(process.argv);
 
+type ip = {
+  ip: string;
+  success: boolean;
+  type: string;
+}
 let iptracker = async () => {
-        const httpc = new httpm.HttpClient('');
-        let res: httpm.HttpClientResponse = await httpc.get('https://api.my-ip.io/ip');
-        let body: string = await res.readBody();
+        const httpc: httpm.HttpClient = new httpm.HttpClient('ip-client');
+        let res: httpm.HttpClientResponse = await httpc.get('https://api.my-ip.io/ip.json');
+        let body: string | void  = await res.readBody().catch((err) => {
+            console.log(err);
+        });
+        if (body) {
+            let ip: ip = JSON.parse(body);
         if (program.user.length > 0) {
-          console.log(program.user + " has ip of " + body )
-        }
+          console.log(program.user + " has ip of " + ip.ip )
+          }
+          else {
+            console.log("You have ip of " + ip.ip )
+          }
       }
+    }
 iptracker()
