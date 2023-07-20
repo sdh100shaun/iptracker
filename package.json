@@ -32,7 +32,7 @@
     "figlet": "^1.5.2",
 
     "path": "^0.12.7",
-    "typed-rest-client": "^1.8.6"
+    "typed-rest-client": "^1.8.11"
   },
   "bin": {
     "iptracker": "./dist/index.js"
